@@ -3,59 +3,44 @@ import WpSource from "@frontity/wp-source/types";
 import Theme from "@frontity/mars-theme-typescript/types";
 
 const settings: Settings<Theme | WpSource> = {
-  "name": "eg-site",
-  "state": {
-    "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
-    }
+  name: "eg-site",
+  state: {
+    frontity: {
+      url: "https://enekogarrido.com",
+      title: "Eneko Garrido",
+      description: "Desarrollador web",
+    },
   },
-  "packages": [
+  packages: [
     {
-      "name": "@frontity/mars-theme-typescript",
-      "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+      name: "@awsmin/f1",
+      state: {
+        theme: {
+          menu: [
+            ["Blog", "/blog/"],
+            ["Porfolio", "/porfolio/"],
+            ["Contacto", "/contacto"],
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+          featured: {
+            showOnList: true,
+            showOnPost: true,
+          },
+          // Whether to auto-fetch links on a page. Values can be "no" | "all" | "in-view" | "hover"
+          autoPrefetch: "hover",
+        },
+      },
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "url": "https://test.frontity.org"
-        }
-      }
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          url: "https://enekogarrido.com",
+        },
+      },
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
-  ]
+    "@frontity/html2react",
+  ],
 };
 
 export default settings;
