@@ -22,7 +22,7 @@ const description = (
 const Page404 = ({ state }) => {
   const data = state.source.get(state.router.link);
 
-  const title = "Oops! Something went wrong";
+  const title = "Oops! Por este camino no era ejeje";
   const title404 = "Oops! 404";
 
   return (

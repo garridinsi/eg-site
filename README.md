@@ -1,4 +1,4 @@
-# eg-site
+# awsm
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 

@@ -1,9 +1,5 @@
-import { Settings } from "frontity/types";
-import WpSource from "@frontity/wp-source/types";
-import Theme from "@frontity/mars-theme-typescript/types";
-
-const settings: Settings<Theme | WpSource> = {
-  name: "eg-site",
+const settings = {
+  name: "awsm",
   state: {
     frontity: {
       url: "https://enekogarrido.com",
@@ -17,16 +13,15 @@ const settings: Settings<Theme | WpSource> = {
       state: {
         theme: {
           menu: [
-            ["Blog", "/blog/"],
-            ["Porfolio", "/porfolio/"],
+            ["Inicio", "/"],
+            ["Blog", "/blog"],
+            ["Porfolio", "/porfolio"],
             ["Contacto", "/contacto"],
           ],
           featured: {
-            showOnList: true,
-            showOnPost: true,
+            showOnList: false,
+            showOnPost: false,
           },
-          // Whether to auto-fetch links on a page. Values can be "no" | "all" | "in-view" | "hover"
-          autoPrefetch: "hover",
         },
       },
     },

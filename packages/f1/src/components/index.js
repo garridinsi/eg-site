@@ -11,7 +11,7 @@ import Jobs from "./pages/jobs";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
-import BootstrapCss from './styles/bootstrap.css';
+import BootstrapCss from "./styles/bootstrap.css";
 import gutenbergStyle from "./styles/gutenberg/style.css";
 import gutenbergTheme from "./styles/gutenberg/theme.css";
 
@@ -29,7 +29,7 @@ const Theme = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
+        <html lang="es" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -50,7 +50,7 @@ const Theme = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
-          <HomePage when={data.isHome} /> 
+          <HomePage when={data.isHome} />
           <Jobs when={data.isAwsmJobOpenings} />
           <Page when={data.isPage} />
           <Post when={data.isPostType} />
@@ -58,8 +58,8 @@ const Theme = ({ state }) => {
         </Switch>
       </Main>
       <FooterContainer>
-        <Footer/>
-      </FooterContainer>      
+        <Footer />
+      </FooterContainer>
     </>
   );
 };
@@ -68,36 +68,42 @@ export default connect(Theme);
 
 const globalStyles = css`
   :root {
-    --brand: #5B3BE8;
+    --brand: #5b3be8;
     --black: #000000;
     --white: #ffffff;
     --bodycolor: #343434;
   }
   body {
     margin: 0;
-    color:var(--bodycolor);
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--bodycolor);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-feature-settings: "kern";
     -webkit-font-smoothing: antialiased;
     min-height: -webkit-fill-available;
   }
   html {
     height: -webkit-fill-available;
-  },
+  }
+  ,
   a,
-  a:visited {  
+  a:visited {
     text-decoration: none;
     &:hover {
       text-decoration: none;
     }
   }
-  h1, h2, h3, h4, h5, h6 {
-    color:var(--black);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--black);
   }
   p {
-    line-height:24px;
-    font-size:18px;
+    line-height: 24px;
+    font-size: 18px;
   }
   // #root {
   //   display:flex;
@@ -106,13 +112,13 @@ const globalStyles = css`
   // }
   .container {
     max-width: 1200px;
-    width:100%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
   }
-  .section{
+  .section {
     padding: 34px 0;
     @media (min-width: 992px) {
       padding: 50px 0;
@@ -122,18 +128,18 @@ const globalStyles = css`
 
 const HeadContainer = styled.div`
   display: flex;
-  width:100%;
-  max-width:1200px;
+  width: 100%;
+  max-width: 1200px;
   justify-content: space-between;
   margin: 0 auto;
   padding-top: 2.75rem;
   padding-right: 15px;
   padding-left: 15px;
-  padding-bottom:6.25rem;
+  padding-bottom: 6.25rem;
 `;
 const FooterContainer = styled.div`
-  width:100%;
-  background:var(--brand);
+  width: 100%;
+  background: var(--brand);
   // margin-top: auto;
 `;
 

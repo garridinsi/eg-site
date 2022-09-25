@@ -5,12 +5,13 @@ import Nav from "./nav";
 import MobileMenu from "./menu";
 
 const Header = ({ state }) => {
+  const siteNameSplit = state.frontity.title.split(" ");
   return (
     <>
       <BrandContainer>
         <StyledLink link="/">
           <Title>
-            <span>Eneko</span> Garrido
+            <span>{siteNameSplit[0]}</span> {" " + siteNameSplit[1]}
           </Title>
         </StyledLink>
         <MobileMenu />
