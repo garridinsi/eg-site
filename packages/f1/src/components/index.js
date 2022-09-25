@@ -22,7 +22,6 @@ import gutenbergTheme from "./styles/gutenberg/theme.css";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  console.log(data);
 
   return (
     <>
@@ -140,7 +139,7 @@ const HeadContainer = styled.div`
 `;
 const FooterContainer = styled.div`
   width: 100%;
-  background: #f4633a;
+  background: var(--brand);
   // margin-top: auto;
 `;
 
