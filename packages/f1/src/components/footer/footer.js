@@ -6,43 +6,30 @@ import Link from "../link";
 
 const Footer = ({ state }) => {
   // const options = state.source.get("acf-options-page");
+  const currentTime = new Date(Date.now());
+  const currentYear = currentTime.getFullYear();
   return (
     <>
       <Container>
         <div className="row">
           <div className="col-6 footer-widget widget-one">
-            <h6 className="widget-title">About mi</h6>
+            <h6 className="widget-title">About me</h6>
             <p>
-              Soy un desarrollador web al que le gustan los transportes. En
-              especial los trenes. Choo choo 🚄 :)
+              Soy un desarrollador web al que le gustan los transportes. <br />{" "}
+              En especial los trenes. Choo choo 🚄 :)
             </p>
           </div>
           <div className="col footer-widget widget-two">
             <h6 className="widget-title">Legales</h6>
             <ul className="widget-list">
               <li>
-                <Link className="widget-list-link" link="/about/">
-                  About us
+                <Link className="widget-list-link" link="/privacidad/">
+                  Privacidad
                 </Link>
               </li>
               <li>
-                <Link className="widget-list-link" link="/services/">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link className="widget-list-link" link="/jobs/">
-                  Career
-                </Link>
-              </li>
-              <li>
-                <Link className="widget-list-link" link="/blog/">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link className="widget-list-link" link="/contact/">
-                  Contact
+                <Link className="widget-list-link" link="/cookies/">
+                  Cookies
                 </Link>
               </li>
             </ul>
@@ -77,7 +64,7 @@ const Footer = ({ state }) => {
                   rel="nofollow noopener"
                   link="https://github.com/garridinsi"
                 >
-                  Github
+                  GitHub
                 </Link>
               </li>
               <li>
@@ -93,6 +80,7 @@ const Footer = ({ state }) => {
             </ul>
           </div>
         </div>
+        <div>{"© " + currentYear + ", " + state.frontity.title}</div>
       </Container>
     </>
   );
@@ -114,6 +102,8 @@ const Container = styled.footer`
     .widget-title {
       color:var(--white);
       margin-bottom:1.2rem;
+      text-decoration: underline dashed;
+      font-weight: bold;
     }
     p {
       font-size:1rem;
