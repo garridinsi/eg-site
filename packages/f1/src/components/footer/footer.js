@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "../link";
-//import CarbonBadge from "@garridinsi/react-carbonbadge";
+import CarbonBadge from "@garridinsi/react-carbonbadge";
 
 // simplest form (only email)
 
@@ -19,7 +19,7 @@ const Footer = ({ state }) => {
               Soy un desarrollador web al que le gustan los transportes. <br />{" "}
               En especial los trenes. Choo choo 🚄 :)
             </p>
-            {/* <CarbonBadge darkMode={true}></CarbonBadge> */}
+            <CarbonBadge darkMode={true}></CarbonBadge>
           </div>
           <div className="col footer-widget widget-two">
             <h6 className="widget-title">Legales</h6>
