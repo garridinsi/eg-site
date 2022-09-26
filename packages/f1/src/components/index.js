@@ -135,6 +135,9 @@ const globalStyles = css`
       margin-right: 0.3rem;
     }
   }
+  table {
+    table-layout: fixed;
+  }
 `;
 
 const HeadContainer = styled.div`

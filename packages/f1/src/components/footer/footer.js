@@ -123,6 +123,7 @@ const Container = styled.footer`
   padding-right: 15px;
   padding-left: 15px;
   color:var(--white);
+  margin-top: 2rem;
   .footer-widget {
     margin-bottom:1rem;
     .widget-title {

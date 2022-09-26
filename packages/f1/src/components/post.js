@@ -153,7 +153,7 @@ const Content = styled.div`
       &::before {
         content: "";
         display: block;
-        padding-top: 56.25%;
+        // padding-top: 56.25%;
       }
     }
     iframe {
