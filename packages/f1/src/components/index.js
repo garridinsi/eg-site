@@ -69,7 +69,7 @@ export default connect(Theme);
 
 const globalStyles = css`
   :root {
-    --brand: #5b3be8;
+    --brand: #f4633a;
     --black: #000000;
     --white: #ffffff;
     --bodycolor: #343434;
@@ -140,7 +140,7 @@ const HeadContainer = styled.div`
 `;
 const FooterContainer = styled.div`
   width: 100%;
-  background: #f4633a;
+  background: var(--brand);
   // margin-top: auto;
 `;
 
