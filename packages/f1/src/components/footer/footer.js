@@ -2,6 +2,14 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "../link";
 import CarbonBadge from "@garridinsi/react-carbonbadge";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaGithub,
+  FaWordpress,
+  FaLinkedin,
+  FaCopyright,
+} from "react-icons/fa";
 
 // simplest form (only email)
 
@@ -19,7 +27,7 @@ const Footer = ({ state }) => {
               Soy un desarrollador web al que le gustan los transportes. <br />{" "}
               En especial los trenes. Choo choo 🚄 :)
             </p>
-            <CarbonBadge darkMode={true}></CarbonBadge>
+            <CarbonBadge darkMode={true} />
           </div>
           <div className="col footer-widget widget-two">
             <h6 className="widget-title">Legales</h6>
@@ -41,48 +49,64 @@ const Footer = ({ state }) => {
             <ul className="widget-list">
               <li>
                 <Link
-                  className="widget-list-link"
+                  className="widget-list-link flex-div"
                   target="_blank"
                   rel="nofollow noopener"
                   link="https://twitter.com/garridinsi"
                 >
-                  Twitter
+                  <FaTwitter />
+                  {" Twitter"}
                 </Link>
               </li>
               <li>
                 <Link
-                  className="widget-list-link"
+                  className="widget-list-link flex-div"
                   target="_blank"
                   rel="nofollow noopener"
                   link="https://www.instagram.com/garridinsi/"
                 >
-                  Instagram
+                  <FaInstagram /> {" Instagram"}
                 </Link>
               </li>
               <li>
                 <Link
-                  className="widget-list-link"
+                  className="widget-list-link flex-div"
                   target="_blank"
                   rel="nofollow noopener"
                   link="https://github.com/garridinsi"
                 >
-                  GitHub
+                  <FaGithub /> {" GitHub"}
                 </Link>
               </li>
               <li>
                 <Link
-                  className="widget-list-link"
+                  className="widget-list-link flex-div"
                   target="_blank"
                   rel="nofollow noopener"
                   link="https://profiles.wordpress.org/garridinsi/"
                 >
-                  WordPress.org
+                  <FaWordpress />
+                  {" WordPress.org"}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="widget-list-link flex-div"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  link="https://www.linkedin.com/in/garridinsi/"
+                >
+                  <FaLinkedin />
+                  {" LinkedIn"}
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div>{"© " + currentYear + ", " + state.frontity.title}</div>
+        <div className="flex-div">
+          <FaCopyright />
+          {" " + currentYear + ", " + state.frontity.title}
+        </div>
       </Container>
     </>
   );

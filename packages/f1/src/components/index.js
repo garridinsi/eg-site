@@ -22,7 +22,6 @@ import gutenbergTheme from "./styles/gutenberg/theme.css";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  console.log(data);
 
   return (
     <>
@@ -123,6 +122,17 @@ const globalStyles = css`
     padding: 34px 0;
     @media (min-width: 992px) {
       padding: 50px 0;
+    }
+  }
+  .flex-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    svg {
+      margin-right: 0.3rem;
     }
   }
 `;

@@ -13,6 +13,11 @@ const Post = ({ state, actions, libraries }) => {
   const author = state.source.author[post.author];
   // Get a human readable date.
   const date = new Date(post.date);
+  const dateOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
 
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
@@ -39,13 +44,13 @@ const Post = ({ state, actions, libraries }) => {
             {author && (
               <StyledLink link={author.link}>
                 <Author>
-                  By <b>{author.name}</b>
+                  Por <b>{author.name}</b>
                 </Author>
               </StyledLink>
             )}
             <DateWrapper>
               {" "}
-              on <b>{date.toDateString()}</b>
+              el <b>{date.toLocaleDateString("es-ES", dateOptions)}</b>
             </DateWrapper>
           </div>
         )}
@@ -66,13 +71,13 @@ const Post = ({ state, actions, libraries }) => {
 export default connect(Post);
 
 const ArticleContainer = styled.div`
-  width:100%;
-  max-width:1035px;
+  width: 100%;
+  max-width: 1035px;
   margin: 0 auto;
   padding-right: 15px;
-  padding-left: 15px; 
+  padding-left: 15px;
   .post-title {
-    text-align:center;    
+    text-align: center;
   }
 `;
 
@@ -105,11 +110,11 @@ const Content = styled.div`
   * {
     max-width: 771px;
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
   }
 
   p {
-    margin-bottom:1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   img {
@@ -182,7 +187,7 @@ const Content = styled.div`
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    background-color:var(--white);
+    background-color: var(--white);
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 4px;
@@ -212,7 +217,7 @@ const Content = styled.div`
     line-height: 1.42857143;
     border-radius: 4px;
     color: var(--white);
-    background-color:var(--brand);
+    background-color: var(--brand);
   }
 
   /* WordPress Core Align Classes */

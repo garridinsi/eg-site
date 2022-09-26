@@ -17,12 +17,14 @@
   },
   "prettier": {},
   "dependencies": {
+    "@aamodtgroup/frontity-contact-form-7": "^0.2.14",
     "@awsmin/f1": "./packages/f1",
     "@frontity/core": "^1.16.0",
     "@frontity/html2react": "^1.7.0",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
     "@garridinsi/react-carbonbadge": "^1.1.3",
-    "frontity": "^1.17.2"
+    "frontity": "^1.17.2",
+    "react-icons": "^4.4.0"
   }
 }
