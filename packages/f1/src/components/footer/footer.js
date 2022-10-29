@@ -10,6 +10,7 @@ import {
   FaLinkedin,
   FaCopyright,
 } from "react-icons/fa";
+import Image from "@frontity/components/image";
 
 // simplest form (only email)
 
@@ -27,7 +28,19 @@ const Footer = ({ state }) => {
               Soy un desarrollador web al que le gustan los transportes. <br />{" "}
               En especial los trenes. Choo choo 🚄 :)
             </p>
-            <CarbonBadge darkMode={true} />
+            <div className="row">
+              <div className="col">
+                <StyledImage
+                  alt={"Logo Eneko Garrido"}
+                  src={
+                    "https://enekogarrido.com/wp-content/uploads/2021/02/egrectangulo.png"
+                  }
+                />
+              </div>
+              <div className="col">
+                <CarbonBadge darkMode={true} />
+              </div>
+            </div>
           </div>
           <div className="col footer-widget widget-two">
             <h6 className="widget-title">Legales</h6>
@@ -159,4 +172,11 @@ const Container = styled.footer`
     }
   }
 }
+`;
+
+const StyledImage = styled(Image)`
+  display: block;
+  max-height: 400px;
+  width: 75%;
+  object-fit: fill;
 `;

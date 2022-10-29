@@ -14,13 +14,13 @@ const settings = {
         theme: {
           menu: [
             ["Inicio", "/"],
-            ["Blog", "/blog"],
-            ["Porfolio", "/porfolio"],
-            ["Contacto", "/contacto"],
+            ["Blog", "/blog/"],
+            ["Porfolio", "/porfolio/"],
+            ["Contacto", "/contacto/"],
           ],
           featured: {
             showOnList: false,
-            showOnPost: false,
+            showOnPost: true,
           },
         },
       },
